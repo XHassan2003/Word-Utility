@@ -48,8 +48,8 @@ export default function TextForm(props) {
 
       </div>
       <button className="btn btn-primary " onClick={handleUpClick}>Convert to UpperCase</button>
-      <button className="btn btn-primary mx-2" onClick={handleLoClick}>Convert to LowerCase</button>
-      <button className="btn btn-primary mx-2" onClick={handleCopy}>Copy Text</button>
+      <button className="btn btn-primary mx-3" onClick={handleLoClick}>Convert to LowerCase</button>
+      <button className="btn btn-primary mx-3" onClick={handleCopy}>Copy Text</button>
     </div>
     <div className="container my-2"
         style={{ color: props.greenMode === "green" ? "white" : props.mode === "dark" ? "white" : "#042743" }}>
