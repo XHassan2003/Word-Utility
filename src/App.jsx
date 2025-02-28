@@ -1,7 +1,7 @@
 import './App.css';
 // import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Alert from './components/Alert';
-// import About from './components/About';
+import About from './components/About';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import React, {useState} from 'react'
@@ -51,7 +51,7 @@ function App() {
     <Alert alert={alert} />
     <div className="container my-3">
     <TextForm showAlert={showAlert} heading="Enter the text to analyze below" mode={mode} greenMode={greenMode} />
-    {/* <About/> */}
+    <About/>
     </div>
     </>
   );
