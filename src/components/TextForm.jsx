@@ -18,7 +18,6 @@ export default function TextForm(props) {
     const handleCopy = ()=>{
         // console.log("LowerCase was clicked" + text);
         navigator.clipboard.writeText(text);
-        document.getSelection().removeAllRanges();
         props.showAlert("Copied to clipboard", "success")
     }
     const handleClear = ()=>{
@@ -61,7 +60,7 @@ export default function TextForm(props) {
     <div className="container my-2"
         style={{ color: props.greenMode === "green" ? "white" : props.mode === "dark" ? "white" : "#042743" }}>
         <h2>Your text summary</h2>
-        <p>{text.split(" ").filter((element)=>{return element.length!==0}).length} words & {text.length} characters</p>
+        <p>{text.split(/\s+/).filter((element)=>{return element.length!==0}).length} words & {text.length} characters</p>
         <p>{0.008 * text.split(" ").filter((element)=>{return element.length!==0}).length} Minutes read</p>
         <h2>Preview</h2>
         <p>{text.length>0?text:"Nothing to Preview"}</p>
